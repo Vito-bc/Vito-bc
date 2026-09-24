@@ -39,6 +39,15 @@ A cross-platform study product for the Architect Registration Examination. The a
 - Developed the Flutter/Firebase application and release infrastructure, including backend quotas, app integrity checks, automated tests, and purchase/entitlement flows.
 - The source code and question bank are private while the product approaches production. I can discuss architecture, engineering decisions, and the review process without sharing proprietary content.
 
+### [CUNY MASS Lab](https://cunymasslab.github.io/people/) — vulnerability detection research and developer tooling
+**Python · scikit-learn · reproducible environments · remote debugging** &nbsp;|&nbsp; **2025 capstone research**
+
+For my CISC 4900 capstone, worked with Professor Hui Chen's research group at Brooklyn College on machine-learning approaches to software vulnerability detection.
+
+- Built and evaluated a Python ML pipeline for real-world vulnerability data, covering preprocessing, feature engineering, model training, and comparison with a baseline.
+- Documented how new contributors can set up a reproducible Python environment and debug long-running experiments on a remote Linux cluster.
+- Coauthored two guides published on the lab's website with Josemar Ochoa: [Python development environment for lab research](https://cunymasslab.github.io/blog/2025/python-environment-setup/) and [remote debugging with VS Code and DebugPy](https://cunymasslab.github.io/blog/2025/remote-debugging-vscode/).
+
 ### [ParkGuard API](https://github.com/Vito-bc/parkguard-api) — explainable parking-rule decisions
 **Python · FastAPI · NYC Open Data** &nbsp;|&nbsp; **Public repository; portfolio MVP**
 
@@ -46,10 +55,6 @@ A REST API that combines curb rules, location data, and vehicle profiles to retu
 
 - Handles time-window restrictions, hydrant proximity, and vehicle-specific rules for passenger, truck, taxi, and for-hire profiles.
 - Includes confidence and freshness signals, caching, API documentation, and unit/integration tests.
-
-## Additional research
-
-At CUNY MassLab, I contributed to a software vulnerability detection pipeline, working on preprocessing, feature engineering, and model evaluation.
 
 ## Tools I use
 
