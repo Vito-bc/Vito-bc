@@ -18,11 +18,11 @@ Building a local-first runtime for coordinating AI-assisted workflows across rea
 - Operational domains can be onboarded as controlled projects; Crypto Orchestra is the first active integration.
 
 <p align="center">
-  <img src="assets/jarvis-audit.webp" width="900" alt="TEO Jarvis deterministic audit trail">
+  <img src="assets/01-teo-jarvis-verified-execution-audit-trail.png" width="900" alt="TEO Jarvis deterministic audit trail">
 </p>
 
 <p align="center">
-  <img src="assets/jarvis-crypto-integration.webp" width="900" alt="TEO Jarvis Crypto Orchestra integration recheck">
+  <img src="assets/02-teo-jarvis-crypto-orchestra-integration.png" width="900" alt="TEO Jarvis Crypto Orchestra integration recheck">
 </p>
 
 ### [Crypto Orchestra](https://github.com/Vito-bc/crypto-orchestra) — multi-agent crypto research & paper-trading system
@@ -40,7 +40,7 @@ Built a seven-specialist-agent research pipeline with signal aggregation, a dete
 Built a cross-platform study product with quizzes, flashcards, study planning, progress tracking, and AI-assisted learning workflows. I designed the application architecture, Firebase authentication/data layer, content workflow, evaluation pipeline, and release infrastructure across iOS, Android, and Web.
 
 <p align="center">
-  <img src="assets/are-coach.webp" width="460" alt="ARE Coach app landing screen">
+  <img src="assets/ARE.png" width="460" alt="ARE Coach app landing screen">
 </p>
 
 The source code and question bank remain private while the product approaches release.
@@ -51,7 +51,7 @@ The source code and question bank remain private while the product approaches re
 Built a FastAPI service that combines curb rules, vehicle profiles, hydrant proximity, recurring time windows, and NYC Open Data to return explainable `safe`, `caution`, or `blocked` parking decisions with ticket-exposure estimates.
 
 <p align="center">
-  <img src="assets/parkguard-demo.webp" width="900" alt="ParkGuard demo console">
+  <img src="assets/park_guard.png" width="900" alt="ParkGuard demo console">
 </p>
 
 The API includes typed schemas, upstream-data caching, health monitoring, interactive API documentation, and unit/integration tests.
