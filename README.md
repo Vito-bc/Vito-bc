@@ -1,70 +1,81 @@
 # Vitaliy Tei
 
-**Backend & AI engineer** building systems that turn complex data and rules into testable decisions. My work spans Python services, AI orchestration, evaluation pipelines, and cross-platform products. I care about clear boundaries, reproducible evidence, and software that says plainly what it can do today.
+### Backend & AI Engineer
+
+I build backend, AI, and data systems with an emphasis on testable behavior, explicit safety boundaries, reproducible evidence, and useful product interfaces.
 
 [LinkedIn](https://www.linkedin.com/in/vitaliy-tei-8562172b1) · [Email](mailto:tei_tech@outlook.com) · Brooklyn, New York
 
-## Selected work
+## Featured engineering work
 
-### TEO Jarvis — AI runtime and orchestration platform
-**Python · Linux namespaces · Landlock · DAG workflows · capability security** &nbsp;|&nbsp; **Private repository; active development**
+### TEO Jarvis — policy-controlled multi-agent AI orchestration platform
+**Python · AI agents · LLM orchestration · Linux isolation · deterministic workflows** &nbsp;|&nbsp; **Private repository; active development**
 
-Building a local-first execution foundation for AI-assisted workflows. The runtime uses default-deny policy, explicit authority, deterministic verification, and structured audit records.
+Building a local-first runtime for coordinating AI-assisted workflows across real software projects. Jarvis combines bounded authority, human approval gates, isolated provider calls, managed Git worktrees, durable execution facts, replay/evaluation, and auditable cross-provider review.
 
-- Designed bounded agent execution with declared time, tool-call, and correction limits. A validated DAG engine supports dependencies, branches selected from verified outcomes, forward recovery routes, approval gates, and bounded concurrency.
-- Implemented run-bound, single-use capability authorization. Acceptance contracts and deterministic checks decide whether a step succeeds; an agent's own success claim does not.
-- Isolated provider processes with Linux namespaces, a private `pivot_root` filesystem, read-only mounts, and Landlock. A mediated egress path limits an approved run to its authorized HTTPS destination, with DNS resolution, connection, and TLS SNI checks.
-- Kept API credentials outside the repository, validated file ownership and permissions, delivered secrets over a dedicated file descriptor, and centralized redaction. Versioned traces record policy decisions and observed provider outcomes.
-- Tested sandbox escape attempts against host files, processes, and network access in an adversarial corpus. The production runtime has no third-party Python dependencies.
+- Deterministic checks verify outcomes instead of trusting agent self-reports.
+- Provider execution is constrained by explicit policy and OS-level isolation boundaries.
+- Operational domains can be onboarded as controlled projects; Crypto Orchestra is the first active integration.
 
-The first real provider call requires a separate human approval for that run. Broader development-agent integrations and domain packs remain future work; this is an actively developed execution foundation.
+<p align="center">
+  <img src="assets/jarvis-audit.webp" width="900" alt="TEO Jarvis deterministic audit trail">
+</p>
 
-### [Crypto Orchestra](https://github.com/Vito-bc/crypto-orchestra) — multi-agent trading research
-**Python · Claude API · Coinbase data · reproducible research** &nbsp;|&nbsp; **Public repository; monitor mode**
+<p align="center">
+  <img src="assets/jarvis-crypto-integration.webp" width="900" alt="TEO Jarvis Crypto Orchestra integration recheck">
+</p>
 
-Designed a seven-specialist-agent signal pipeline with a deterministic risk gate and paper-order path. The research program then tested whether a directional strategy could clear execution costs and a credible evidence threshold.
+### [Crypto Orchestra](https://github.com/Vito-bc/crypto-orchestra) — multi-agent crypto research & paper-trading system
+**Python · Multi-Agent Systems · Data Engineering · Backtesting · Reproducible Research** &nbsp;|&nbsp; **Public repository; monitor mode**
 
-- Built walk-forward and feasibility analyses, explicit trial records, and a research verification harness that regenerates committed results from pinned inputs and dependencies.
-- The evaluated directional approaches did **not** demonstrate an actionable edge. The trading pipeline is currently idle; no live orders or scheduled LLM trading are running.
-- Daily execution-cost and hourly funding monitors support a future reassessment if conditions change.
+Built a seven-specialist-agent research pipeline with signal aggregation, a deterministic risk gate, walk-forward and feasibility analysis, and paper/shadow execution. The research program tested whether directional strategies could clear execution costs and a credible evidence threshold.
 
-The negative result is part of the work: the repository records why the system stays in paper/shadow mode instead of claiming a profitable strategy.
+- Built explicit trial records and a verification harness that regenerates committed research results from pinned inputs and dependencies.
+- The evaluated directional approaches did **not** demonstrate an actionable edge, so the system remains in monitor mode rather than claiming a profitable strategy.
+- The system is designed to keep AI-generated proposals behind deterministic risk controls and reproducible evidence checks.
 
-### ARE Coach — architecture exam-prep app
-**Flutter · Firebase · Python · RAG · LLM evaluation** &nbsp;|&nbsp; **Private repository; preparing for release**
+### ARE Coach — AI-powered Architect Registration Exam prep app
+**Flutter · Dart · Firebase · AI Applications · Cross-Platform Development** &nbsp;|&nbsp; **Private repository; preparing for release**
 
-A cross-platform study product for the Architect Registration Examination. The app combines practice questions, mock exams, flashcards, study planning, and an AI-assisted study experience.
+Built a cross-platform study product with quizzes, flashcards, study planning, progress tracking, and AI-assisted learning workflows. I designed the application architecture, Firebase authentication/data layer, content workflow, evaluation pipeline, and release infrastructure across iOS, Android, and Web.
 
-- Built a source-grounded content workflow: retrieve supporting material, generate candidate questions, evaluate answer and explanation consistency, distractor quality, leakage, and duplicates, then route content to architect review.
-- Developed the Flutter/Firebase application and release infrastructure, including backend quotas, app integrity checks, automated tests, and purchase/entitlement flows.
-- The source code and question bank are private while the product approaches production. I can discuss architecture, engineering decisions, and the review process without sharing proprietary content.
+<p align="center">
+  <img src="assets/are-coach.webp" width="460" alt="ARE Coach app landing screen">
+</p>
 
-### [CUNY MASS Lab](https://cunymasslab.github.io/people/) — vulnerability detection research and developer tooling
-**Python · scikit-learn · reproducible environments · remote debugging** &nbsp;|&nbsp; **2025 capstone research**
+The source code and question bank remain private while the product approaches release.
 
-For my CISC 4900 capstone, worked with Professor Hui Chen's research group at Brooklyn College on machine-learning approaches to software vulnerability detection.
+### [ParkGuard API](https://github.com/Vito-bc/parkguard-api) — real-time parking intelligence
+**Python · FastAPI · REST APIs · NYC Open Data · Backend Engineering** &nbsp;|&nbsp; **Public repository; portfolio MVP**
 
-- Built and evaluated a Python ML pipeline for real-world vulnerability data, covering preprocessing, feature engineering, model training, and comparison with a baseline.
-- Documented how new contributors can set up a reproducible Python environment and debug long-running experiments on a remote Linux cluster.
-- Coauthored two guides published on the lab's website with Josemar Ochoa: [Python development environment for lab research](https://cunymasslab.github.io/blog/2025/python-environment-setup/) and [remote debugging with VS Code and DebugPy](https://cunymasslab.github.io/blog/2025/remote-debugging-vscode/).
+Built a FastAPI service that combines curb rules, vehicle profiles, hydrant proximity, recurring time windows, and NYC Open Data to return explainable `safe`, `caution`, or `blocked` parking decisions with ticket-exposure estimates.
 
-### [ParkGuard API](https://github.com/Vito-bc/parkguard-api) — explainable parking-rule decisions
-**Python · FastAPI · NYC Open Data** &nbsp;|&nbsp; **Public repository; portfolio MVP**
+<p align="center">
+  <img src="assets/parkguard-demo.webp" width="900" alt="ParkGuard demo console">
+</p>
 
-A REST API that combines curb rules, location data, and vehicle profiles to return a `safe`, `caution`, or `blocked` parking decision with rule-level explanations.
+The API includes typed schemas, upstream-data caching, health monitoring, interactive API documentation, and unit/integration tests.
 
-- Handles time-window restrictions, hydrant proximity, and vehicle-specific rules for passenger, truck, taxi, and for-hire profiles.
-- Includes confidence and freshness signals, caching, API documentation, and unit/integration tests.
+### [CUNY MASS Lab](https://cunymasslab.github.io/people/) — vulnerability detection research & developer tooling
+**Python · scikit-learn · Reproducible Environments · Remote Debugging** &nbsp;|&nbsp; **2025 capstone research**
 
-## Tools I use
+For my CISC 4900 capstone, I worked with Professor Hui Chen's research group at Brooklyn College on machine-learning approaches to software vulnerability detection.
+
+- Built and evaluated a Python ML pipeline covering preprocessing, feature engineering, model training, and baseline comparison.
+- Documented reproducible Python research environments and remote debugging workflows for new contributors.
+- Coauthored two guides published by the lab with Josemar Ochoa:
+  - [Python development environment for lab research](https://cunymasslab.github.io/blog/2025/python-environment-setup/)
+  - [Remote debugging with VS Code and DebugPy](https://cunymasslab.github.io/blog/2025/remote-debugging-vscode/)
+
+## Engineering stack
 
 | Area | Stack and methods |
 | --- | --- |
-| Backend | Python, FastAPI, REST APIs, async services, Firebase Cloud Functions, Firestore |
-| AI systems | Agent orchestration, capability and approval boundaries, RAG, LLM evaluation, embeddings |
-| Data and ML | Pandas, NumPy, scikit-learn, ETL, backtesting, walk-forward evaluation |
+| Backend | Python, FastAPI, REST APIs, Firebase Cloud Functions, Firestore |
+| AI systems | Agent orchestration, OpenAI API, Anthropic API, RAG, LLM evaluation |
+| Data and ML | Pandas, NumPy, scikit-learn, SQL, ETL, backtesting, walk-forward evaluation |
 | Product | Flutter, Dart, Firebase, JavaScript |
-| Engineering | SQL, Java, C++, Git, GitHub Actions, Linux, automated testing |
+| Engineering | Git, GitHub Actions, Linux, automated testing, Java, C++ |
 
 ## Education
 
